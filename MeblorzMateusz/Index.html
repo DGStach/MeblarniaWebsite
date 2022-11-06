@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="IndexCss.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+<div id="logoNavBar">
+    <img src="img/mmlogo.jpeg">
+</div>
+<div id="socialMediaIcons">
+    <a href="https://www.instagram.com/meblorz_mateusz/">
+        <i class="fa fa-instagram fa-sm" aria-hidden="true"> Instagram</i>
+    </a>
+    <a href="https://www.facebook.com/meblorzmateusz">
+        <i class="fa fa-facebook-square fa-sm" aria-hidden="true"> Facebook</i>
+    </a>
+</div>
+
+<div class="navBarContainer" id="navBarContainer">
+    <a href="oMnie.html" class="active">O Mnie</a>
+    <a href="galery.html">Realizacje</a>
+    <a href="Oferta.html">Oferta</a>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i></a>
+</div>
+
+<div id="AboutMeContent">
+  <img src="img/pexels.jpeg">
+
+<p>
+    Cześć, to ja – Mateusz.
+    Jestem stolarzem i&nbsprobię meble. Moja pasja do tego zawodu narodziła się kilka lat temu. Zdobywałem doświadczenie
+    zarówno w&nbsppolskich warsztatach stolarskich, jak i&nbspza granicą. W&nbsp2021 roku założyłem własną firmę.
+    Działam głównie w&nbspKrakowie, ale też w&nbspTarnowie i&nbspokolicy.
+</p>
+<p>
+    Niech Was jednak nie zmyli zdjęcie - na co dzień nie stoję z&nbspzałożonymi rękami, tylko codziennie zakasam rękawy
+    i&nbsptrudnię się zarówno projektowaniem, doradztwem czy wyceną, jak i&nbspwykonawstwem wraz z&nbspkompleksowym
+    montażem mebli. Przykładam dużą uwagę do detali i&nbspnie toleruję fuszerki. Pracuję na materiałach wysokiej jakości
+    i&nbspdbam o&nbspto, by na koniec pracy nawet najbardziej perfekcyjny klient był usatysfakcjonowany.
+
+</p>
+<p>
+    Jeśli więc potrzebujesz szafek do kuchni, salonu czy łazienki, chciałbyś zabudować nieustawną wnękę czy poddasze lub
+    po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłu - odezwij się, razem na
+    pewno coś temu zaradzimy!
+
+</p>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("navBarContainer");
+        if (x.className === "navBarContainer") {
+            x.className += " responsive";
+        } else {
+            x.className = "navBarContainer";
+        }
+    }
+</script>
+</body>

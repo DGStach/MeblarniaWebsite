@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wild Animals Gallery</title>
+  <link rel="stylesheet" href="galeryCSS.css">
+</head>
+<body>
+    <div class="full-img" id="fullImgBox">
+        <img src="img/bird.jpeg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+            <span class="prev" onclick="minSlides(-1)" onclick="CurrentSlideDisplay()">❮</span>
+            <span class="next" onclick="plusSlides(1)" onclick="CurrentSlideDisplay()">❯</span>
+    </div>
+
+    <div class="container">
+        <img class="mySlides" src="img/bird.jpeg" onclick="currentSlide(0)">
+  <img class="mySlides" src="img/elephant.jpeg" onclick="currentSlide(1)">
+  <img class="mySlides" src="img/fish.jpeg" onclick="currentSlide(2)">
+  <img class="mySlides" src="img/horse.jpeg" onclick="currentSlide(3)">
+  <img class="mySlides" src="img/monkey.jpeg" onclick="currentSlide(4)">
+  <img class="mySlides" src="img/pexels.jpeg" onclick="currentSlide(5)">
+</div>
+
+</body>
+
+<script>
+ var fullImgBox = document.getElementById("fullImgBox")
+ var fullImg = document.getElementById("fullImg")
+ var slide = document.getElementsByClassName("mySlides")
+ var currentSlideArgument;
+
+ function currentSlide(currentSlideArgument) {
+     n0 = currentSlideArgument;
+     fullImgBox.style.display = "flex";
+     fullImg.src=slide[n0].src;
+
+ }
+ function plusSlides(){
+     n0++;
+     console.log(n0);
+     if (n0>5){
+         n0=0
+     }
+     fullImgBox.style.display = "flex";
+     fullImg.src=slide[n0].src;
+ }
+ function minSlides(){
+     n0--;
+     console.log(n0);
+     if (n0<0){
+         n0=5
+     }
+     fullImgBox.style.display = "flex";
+     fullImg.src=slide[n0].src;
+ }
+ function closeFullImg(){
+     fullImgBox.style.display = "none"
+ }
+</script>
+</html>
