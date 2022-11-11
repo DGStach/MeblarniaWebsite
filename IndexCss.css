@@ -1,103 +1,198 @@
-
 /*-----------NAVBAR CSS--------------- */
 
 /*https://codepen.io/kevray_39/pen/dyPjgjP*/
 
-body{
-    margin:0;
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0 10%;
+        background-color: greenyellow;
+    }
+    #slideShowContainer span:last-child {
+    top:17%;
+        right: 5%;
+    }
+    #slideShowContainer span:first-child {
+    top:17%;
+        left: 5%;
+    }
+    #slideShowContainer img{
+        width:60%;
+        height:60%;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        margin: 0 1%;
+        background-color: blue;
+    }
+    #slideShowContainer span:last-child {
+        top:17%;
+        right: 5%;
+    }
+    #slideShowContainer span:first-child {
+        top:17%;
+        left: 5%;
+    }
+    #slideShowContainer img{
+        width:70%;
+        height:70%;
+        justify-items: center;
+    }
+    #AboutMeContent img {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+body {
+    margin: 0 20%;
     font-family: Arial, Helvetica, sans-serif;
-}
-/*-----------LOGO NAVBAR --------------- */
-#logoNavBar img{
-    height: 200px;
-    width: 200px;
-    display: block;
-    margin: auto;
-}
-/*-----------SOCIAL MEDIA HREF/ICONS--------------- */
-#socialMediaIcons{
-    display: inline-block;
-    padding: 4px;
-    margin-left: 5px;
-    margin-bottom: 5px;
 
-}
-#socialMediaIcons a {
-   text-decoration: none;
-}
-
-#socialMediaIcons a:visited {
-    color: black;
 }
 
 /*-----------TOP NAVBAR --------------- */
 
-.navBarContainer{
+.navBarContainer {
     overflow: hidden;
-    background-color: #333;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
 }
-.navBarContainer a{
-    float: left;
+
+.navBarContainerHrefGroup {
+    margin-left: 20%;
+    display: flex;
+}
+
+#navBarContainer img {
+    height: 5%;
+    width: 5%;
+    min-height: 80px;
+    min-width: 80px;
+
+}
+
+.navBarContainer a {
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-}
-.navBarContainer a:hover{
-    background-color: #ddd;
-    color:black;
-}
-.navBarContainer a.active{
-    background-color: dimgrey;
-    color:white;
+    font-size: 1.4rem;
+    /*justify-content: center;*/
+    /*top: 50%;*/
 }
 
-.navBarContainer .icon{
+.navBarContainer a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navBarContainer a.active {
+    background-color: dimgrey;
+    color: white;
+}
+
+.navBarContainer .icon {
     display: none;
 }
-@media screen and (max-width: 600px){
-    .navBarContainer a:not(:first-child) {display: none;}
-    .navBarContainer a.icon{
-        float: right;
+
+@media screen and (max-width: 600px) {
+    .navBarContainer a:not(:last-child) {
+        display: none;
+    }
+
+    .navBarContainer a.icon {
+        float: left;
         display: block;
     }
 }
 
-@media screen and (max-width: 600px){
-    .navBarContainer.responsive {position: relative;}
-    .navBarContainer.responsive .icon{
-        position:absolute;
+@media screen and (max-width: 600px) {
+    .navBarContainer.responsive {
+        position: relative;
+    }
+
+    .navBarContainer.responsive .icon {
+        position: absolute;
         right: 0;
         top: 0;
     }
+
     .navBarContainer.responsive a {
         float: none;
         display: block;
-        text-align:left;
+        text-align: left;
     }
 }
+
+/* ---------------   slideShowContainer------------*/
+#slideShowContainer{
+    display: flex;
+}
+#slideShowPhoto{
+    text-align: center;
+}
+#slideShowContainer img{
+    width:70%;
+    height:70%;
+justify-items: center;
+}
+#slideShowContainer span{
+   font-size: 500%;
+    color: black;
+
+}
+#slideShowContainer span:last-child {
+    position: absolute;
+    top:40%;
+    right: 35%;
+}
+#slideShowContainer span:first-child {
+    position: absolute;
+    left: 35%;
+    top:60%;
+
+}
+
 /*-----------#AboutMeContent --------------- */
 
-#AboutMeContent img{
-    width: 400px;
-    height:350px;
+#AboutMeContent img {
+    width: 30%;
+    height: 30%;
     margin: 0 10px;
     float: right;
 }
 
-p{
-   /* text-decoration: none;*/
+p {
     color: #000;
     margin-left: 20px;
     text-indent: 50px;
     text-align: justify;
     letter-spacing: 2px;
+    font-size: 1.5rem;
 }
-@media screen and (max-width: 600px){
-    #AboutMeContent img{
-        width: 200px;
-        height:160px;
-    }
+
+
+/*-----------SOCIAL MEDIA HREF/ICONS--------------- */
+#socialMediaIcons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-top: 2px solid black;
+}
+
+#socialMediaIcons a {
+    text-decoration: none;
+}
+
+#socialMediaIcons a i {
+    scale: 3.5;
+    margin: 80px;
+}
+
+#socialMediaIcons a:visited {
+    color: black;
 }

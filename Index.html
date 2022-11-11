@@ -5,51 +5,96 @@
     <title>Title</title>
     <link href="IndexCss.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="ContactFormCSS.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body>
-<div id="logoNavBar">
-    <img src="img/mmlogo.jpeg">
-</div>
-<div id="socialMediaIcons">
-    <a href="https://www.instagram.com/meblorz_mateusz/">
-        <i class="fa fa-instagram fa-sm" aria-hidden="true"> Instagram</i>
-    </a>
-    <a href="https://www.facebook.com/meblorzmateusz">
-        <i class="fa fa-facebook-square fa-sm" aria-hidden="true"> Facebook</i>
-    </a>
-</div>
+
+
 
 <div class="navBarContainer" id="navBarContainer">
-    <a href="oMnie.html" class="active">O Mnie</a>
-    <a href="galery.html">Realizacje</a>
-    <a href="Oferta.html">Oferta</a>
-    <a href="Kontakt.html">Kontakt</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i></a>
+    <img src="img/LOGO-%20beztla-%20male.png">
+    <div class="navBarContainerHrefGroup">
+        <a href="oMnie.html" class="active">O MNIE</a>
+        <a href="galery.html">REALIZACJE</a>
+        <a href="Oferta.html">OFERTA</a>
+        <a href="Kontakt.html">KONTAKT</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+</div>
+
+<div id="slideShowContainer">
+    <div id="slideShowPhoto">
+        <img src="img/1.jpg" onclick="currentSlide(0)">
+       <!-- <img src="img/2.jpg" onclick="currentSlide(1)">
+        <img src="img/3.jpg" onclick="currentSlide(2)">
+         <img src="img/4.jpg" onclick="currentSlide(3)">
+         <img src="img/5.jpg" onclick="currentSlide(4)">-->
+        <div id="slideShowButton">
+            <span><</span>
+            <span>></span>
+        </div>
+    </div>
+
+
 </div>
 
 <div id="AboutMeContent">
-  <img src="img/pexels.jpeg">
+    <img src="img/MeblorzPhoto.jpg">
 
-<p>
-    Cześć, to ja – Mateusz.
-    Jestem stolarzem i&nbsprobię meble. Moja pasja do tego zawodu narodziła się kilka lat temu. Zdobywałem doświadczenie
-    zarówno w&nbsppolskich warsztatach stolarskich, jak i&nbspza granicą. W&nbsp2021 roku założyłem własną firmę.
-    Działam głównie w&nbspKrakowie, ale też w&nbspTarnowie i&nbspokolicy.
-</p>
-<p>
-    Niech Was jednak nie zmyli zdjęcie - na co dzień nie stoję z&nbspzałożonymi rękami, tylko codziennie zakasam rękawy
-    i&nbsptrudnię się zarówno projektowaniem, doradztwem czy wyceną, jak i&nbspwykonawstwem wraz z&nbspkompleksowym
-    montażem mebli. Przykładam dużą uwagę do detali i&nbspnie toleruję fuszerki. Pracuję na materiałach wysokiej jakości
-    i&nbspdbam o&nbspto, by na koniec pracy nawet najbardziej perfekcyjny klient był usatysfakcjonowany.
+    <p>
+        Cześć, to ja – Mateusz.
+        Jestem stolarzem i&nbsprobię meble. Moja pasja do tego zawodu narodziła się kilka lat temu. Zdobywałem
+        doświadczenie
+        zarówno w&nbsppolskich warsztatach stolarskich, jak i&nbspza granicą. W&nbsp2021 roku założyłem własną firmę.
+        Działam głównie w&nbspKrakowie, ale też w&nbspTarnowie i&nbspokolicy.
+    </p>
+    <p>
+        Niech Was jednak nie zmyli zdjęcie - na co dzień nie stoję z&nbspzałożonymi rękami, tylko codziennie zakasam
+        rękawy
+        i&nbsptrudnię się zarówno projektowaniem, doradztwem czy wyceną, jak i&nbspwykonawstwem wraz z&nbspkompleksowym
+        montażem mebli. Przykładam dużą uwagę do detali i&nbspnie toleruję fuszerki. Pracuję na materiałach wysokiej
+        jakości
+        i&nbspdbam o&nbspto, by na koniec pracy nawet najbardziej perfekcyjny klient był usatysfakcjonowany.
 
-</p>
-<p>
-    Jeśli więc potrzebujesz szafek do kuchni, salonu czy łazienki, chciałbyś zabudować nieustawną wnękę czy poddasze lub
-    po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłu - odezwij się, razem na
-    pewno coś temu zaradzimy!
+    </p>
+    <p>
+        Jeśli więc potrzebujesz szafek do kuchni, salonu czy łazienki, chciałbyś zabudować nieustawną wnękę czy poddasze
+        lub
+        po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłu - odezwij się,
+        razem na
+        pewno coś temu zaradzimy!
 
-</p>
+    </p>
+</div>
+
+<div id="contact">
+    <div>
+        <h1 class="headings">KONTAKT<br><br></h1>
+        <p><span>telefon:792972255<br><br></span></p>
+        <p><span>email:meblorzmateusz@gmail.com<br><br></span></p>
+    </div>
+    <form target="_blank" action="https://formsubmit.co/dagmarastepak@gmail.com" enctype="multipart/form-data"
+          method="POST" class="form">
+        <input type="text" name="name" class="input" placeholder="Imie">
+        <input type="hidden" name="_subject" value="New Email">
+        <input type="email" name="email" class="input" placeholder="Email" required>
+        <input type="phone" name="phone" class="input" placeholder="Numer Telefonu">
+        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Treść wiadomości" required></textarea>
+        <input id="attachment" type="file" name="attachment" accept="image/png, image/jpeg">
+        <input type="submit" value="WYŚLIJ" id="send">
+        <input type="hidden" name="_next" value="https://dgstach.github.io/Index.html">
+    </form>
+</div>
+
+<div id="socialMediaIcons">
+    <a href="https://www.instagram.com/meblorz_mateusz/">
+        <i class="fa fa-instagram fa-sm" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.facebook.com/meblorzmateusz">
+        <i class="fa fa-facebook-square fa-sm" aria-hidden="true"></i>
+    </a>
 </div>
 
 <script>

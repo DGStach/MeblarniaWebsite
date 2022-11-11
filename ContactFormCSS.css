@@ -1,21 +1,21 @@
 /* CONTACT SECTION */
 
-h1{
-    text-align: center;
-}
-
 #contact{
+    padding: 15% 15%;
+    text-align: center;
+    clear: both;
+}
+#contact div span{
     display:flex;
     text-align: center;
-    margin-top:100px;
+    margin-top:30px;
+    font-size: 1.5rem;
+
 }
 
 .form{
     display:flex;
     flex-direction: column;
-    /*   align-items:center; */
-    margin-left: 13%;
-    margin-right: 13%;
 
 }
 .form input, textarea{
