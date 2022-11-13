@@ -130,21 +130,18 @@ body {
 
 /* ---------------   slideShowContainer------------*/
 #slideShowContainer{
-    display: flex;
-}
-#slideShowPhoto{
+    font-size: xxx-large;
     text-align: center;
 }
 #slideShowContainer img{
     width:70%;
     height:70%;
-justify-items: center;
+    vertical-align: middle;
 }
-#slideShowContainer span{
-   font-size: 500%;
+.slideShowContainer span{
     color: black;
-
 }
+/*
 #slideShowContainer span:last-child {
     position: absolute;
     top:40%;
@@ -155,7 +152,7 @@ justify-items: center;
     left: 35%;
     top:60%;
 
-}
+}*/
 
 /*-----------#AboutMeContent --------------- */
 

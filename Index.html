@@ -11,7 +11,6 @@
 <body>
 
 
-
 <div class="navBarContainer" id="navBarContainer">
     <img src="img/LOGO-%20beztla-%20male.png">
     <div class="navBarContainerHrefGroup">
@@ -24,22 +23,11 @@
     </div>
 </div>
 
-<div id="slideShowContainer">
-    <div id="slideShowPhoto">
-        <img src="img/1.jpg" onclick="currentSlide(0)">
-       <!-- <img src="img/2.jpg" onclick="currentSlide(1)">
-        <img src="img/3.jpg" onclick="currentSlide(2)">
-         <img src="img/4.jpg" onclick="currentSlide(3)">
-         <img src="img/5.jpg" onclick="currentSlide(4)">-->
-        <div id="slideShowButton">
-            <span><</span>
-            <span>></span>
-        </div>
+    <div id="slideShowContainer">
+        <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
+        <img id="photoSlideShow" class="slideShowPhoto" src="img/1.jpg">
+        <span class="slideShowButton" onclick="scrollPhoto(1)">></span>
     </div>
-
-
-</div>
-
 <div id="AboutMeContent">
     <img src="img/MeblorzPhoto.jpg">
 
@@ -98,6 +86,7 @@
 </div>
 
 <script>
+    var imgNumber;
     function myFunction() {
         var x = document.getElementById("navBarContainer");
         if (x.className === "navBarContainer") {
@@ -106,5 +95,38 @@
             x.className = "navBarContainer";
         }
     }
+
+    const scrollPhoto = (counter) => {
+        const minImgNumber = 1;
+        const maxImgNumber = 5;
+        const imgElement = document.getElementById('photoSlideShow');
+
+        const imgNumber = imgElement.getAttribute('src').replace('img/','').replace('.jpg','');
+        let nextImgNumber = Number(imgNumber) + counter;
+
+        nextImgNumber = nextImgNumber === minImgNumber - 1 ? maxImgNumber : nextImgNumber;
+        nextImgNumber = nextImgNumber === maxImgNumber + 1 ? minImgNumber : nextImgNumber;
+
+        document.getElementById('photoSlideShow').setAttribute('src', `img/${nextImgNumber}.jpg`);
+    }
+
+
+    // const scrollPhoto = (counter) => {
+    //     let imgLocation = document.getElementById('photoSlideShow').getAttribute('src')
+    //     imgLocation=imgLocation.replace('img/','');
+    //     imgNumber = imgLocation.replace('.jpg','');
+    //     imgNumber = Number(imgNumber);
+    //     imgNumber += counter;
+    //     if (imgNumber === 6){
+    //         imgNumber = 1;
+    //     }
+    //     if (imgNumber === 0){
+    //         imgNumber = 5;
+    //     }
+    //     imgLocation = "img/" + imgNumber +".jpg"
+    //     document.getElementById('photoSlideShow').setAttribute('src', imgLocation);
+    //
+    //
+    // }
 </script>
 </body>
