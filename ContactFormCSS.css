@@ -1,17 +1,30 @@
 /* CONTACT SECTION */
-
-#contact{
-    padding: 15% 15%;
-    text-align: center;
+#contactContainer{
     clear: both;
 }
-#contact div span{
+
+#contactContainer h1 {
+    padding: 50px;
+    text-align: center;
+}
+
+#contact{
+    display: flex;
+    column-gap: 60px;
+    justify-content: center;
+}
+#contact div{
+ justify-content: flex-start;
+    color: black;
+}
+
+/*#contact div span{
     display:flex;
     text-align: center;
     margin-top:30px;
     font-size: 1.5rem;
 
-}
+}*/
 
 .form{
     display:flex;

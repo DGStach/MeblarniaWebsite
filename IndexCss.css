@@ -1,50 +1,57 @@
 /*-----------NAVBAR CSS--------------- */
 
 /*https://codepen.io/kevray_39/pen/dyPjgjP*/
-
+/*
 @media screen and (max-width: 800px) {
     body {
         margin: 0 10%;
         background-color: greenyellow;
     }
+
     #slideShowContainer span:last-child {
-    top:17%;
+        top: 17%;
         right: 5%;
     }
+
     #slideShowContainer span:first-child {
-    top:17%;
+        top: 17%;
         left: 5%;
     }
-    #slideShowContainer img{
-        width:60%;
-        height:60%;
+
+    #slideShowContainer img {
+        width: 60%;
+        height: 60%;
         justify-items: center;
     }
 }
 
 @media screen and (max-width: 600px) {
-    body{
+    body {
         margin: 0 1%;
         background-color: blue;
     }
+
     #slideShowContainer span:last-child {
-        top:17%;
+        top: 17%;
         right: 5%;
     }
+
     #slideShowContainer span:first-child {
-        top:17%;
+        top: 17%;
         left: 5%;
     }
-    #slideShowContainer img{
-        width:70%;
-        height:70%;
+
+    #slideShowContainer img {
+        width: 70%;
+        height: 70%;
         justify-items: center;
     }
+
     #AboutMeContent img {
         width: 60%;
         height: 60%;
     }
-}
+}*/
 
 body {
     margin: 0 20%;
@@ -81,18 +88,16 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 1.4rem;
-    /*justify-content: center;*/
-    /*top: 50%;*/
+    font-family: sans-serif;
 }
 
 .navBarContainer a:hover {
-    background-color: #ddd;
-    color: black;
+    color: dimgrey;
+    transition: color 0.5s ease 0s;
 }
 
 .navBarContainer a.active {
-    background-color: dimgrey;
-    color: white;
+    color: dimgrey;
 }
 
 .navBarContainer .icon {
@@ -129,18 +134,23 @@ body {
 }
 
 /* ---------------   slideShowContainer------------*/
-#slideShowContainer{
-    font-size: xxx-large;
+#slideShowContainer {
     text-align: center;
 }
-#slideShowContainer img{
-    width:70%;
-    height:70%;
+
+#slideShowContainer img {
+    width: 70%;
+    height: 70%;
     vertical-align: middle;
+    padding: 30px;
 }
-.slideShowContainer span{
-    color: black;
+
+#slideShowContainer span{
+    color: dimgrey;
+    font-size: 70px;
+    cursor: pointer;
 }
+
 /*
 #slideShowContainer span:last-child {
     position: absolute;
@@ -153,6 +163,18 @@ body {
     top:60%;
 
 }*/
+/*-----------#OFFER --------------- */
+#offer{
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    column-gap: 300px;
+    justify-content: center;
+}
+#offer span{
+   font-size: 25px;
+}
+
 
 /*-----------#AboutMeContent --------------- */
 
@@ -170,6 +192,7 @@ p {
     text-align: justify;
     letter-spacing: 2px;
     font-size: 1.5rem;
+    font-family: OpenSansRegular;
 }
 
 
@@ -188,8 +211,20 @@ p {
 #socialMediaIcons a i {
     scale: 3.5;
     margin: 80px;
+    cursor: pointer;
 }
 
 #socialMediaIcons a:visited {
     color: black;
+}
+
+/*FONTS*/
+@font-face {
+    font-family: OpenSansItalic;
+    src: url(fonts/Open_Sans/static/OpenSans/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: OpenSansRegular;
+    src: url(fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
 }
