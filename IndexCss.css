@@ -1,4 +1,7 @@
 /*-----------NAVBAR CSS--------------- */
+/*logo zawsze w lewym górnym - większe
+pozostale elementy z paska zawsze na srodku
+przy waskim ekranie spany ustawiaja sie w pionie razem ze zdjeciem w slide show*/
 
 /*https://codepen.io/kevray_39/pen/dyPjgjP*/
 /*
@@ -54,41 +57,74 @@
 }*/
 
 body {
-    margin: 0 20%;
+    /* margin: 0 20%;*/
     font-family: Arial, Helvetica, sans-serif;
 
+}
+h1{
+    font-size: 9vh;
+    color:black;
+    font-family: raleway, sans-serif;
+    margin-left: 5vw;
+
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
 }
 
 /*-----------TOP NAVBAR --------------- */
 
 .navBarContainer {
-    overflow: hidden;
-    padding: 10px 50px;
+ /*   overflow: hidden;*/
+   /* padding: 10px 50px;*/
     display: flex;
-    align-items: center;
+/*    align-items: center;*/
+/*    margin:1% 5% 0% 5%;*/
 }
 
 .navBarContainerHrefGroup {
-    margin-left: 20%;
+
+    /*
+    background-color: #666666;
+    */
+     /*
+     font-size: 10vh;
+     */
+    font-family: sans-serif;
     display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+box-sizing: border-box;
+    cursor:pointer;
+    align-items: center;
+
 }
 
 #navBarContainer img {
-    height: 5%;
-    width: 5%;
+    height: 15vh;
+    width: 15vh;
     min-height: 80px;
     min-width: 80px;
+    margin: 2% 0% 0% 5%;
+ /*   position: absolute;
+    position:fixed;
+    float: left;*/
+
 
 }
 
 .navBarContainer a {
-    display: block;
+    display: flex;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0 1.5vw;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 2vw;
     font-family: sans-serif;
+
 }
 
 .navBarContainer a:hover {
@@ -104,6 +140,7 @@ body {
     display: none;
 }
 
+/*
 @media screen and (max-width: 600px) {
     .navBarContainer a:not(:last-child) {
         display: none;
@@ -114,8 +151,9 @@ body {
         display: block;
     }
 }
+*/
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .navBarContainer.responsive {
         position: relative;
     }
@@ -131,76 +169,123 @@ body {
         display: block;
         text-align: left;
     }
-}
+}*/
 
 /* ---------------   slideShowContainer------------*/
 #slideShowContainer {
-    text-align: center;
+   /* text-align: center;*/
+    /*
+    object-fit: cover;
+    */
+margin:1% 5% 5% 5%;
+    display: flex;
+        justify-content: center;
 }
 
 #slideShowContainer img {
-    width: 70%;
-    height: 70%;
-    vertical-align: middle;
-    padding: 30px;
+    display: flex;
+/*    justify-content: center;*/
+width: 100vw;
+    height: 80vh;
+/*    vertical-align: middle;*/
+/*    object-fit: cover;
+    z-index: 0;
+!*    padding: 30px;*!*!*/
 }
 
-#slideShowContainer span{
-    color: dimgrey;
+#slideShowContainer span {
+    color: antiquewhite;
+  /*  color: black;*/
     font-size: 70px;
     cursor: pointer;
+    font-size: 10vh;
 }
 
-/*
 #slideShowContainer span:last-child {
+
     position: absolute;
-    top:40%;
-    right: 35%;
+    z-index: 100;
+    right: 8vw;
+    top: 50vh;
 }
 #slideShowContainer span:first-child {
     position: absolute;
-    left: 35%;
-    top:60%;
+    z-index: 100;
+    left: 8vw;
+    top: 50vh;
 
-}*/
+}
 /*-----------#OFFER --------------- */
-#offer{
+#offer {
+
     display: flex;
-    padding: 50px;
+    /* padding: 50px; */
     align-items: center;
-    column-gap: 300px;
-    justify-content: center;
-}
-#offer span{
-   font-size: 25px;
+    column-gap: 30%;
+    /* justify-content: center; */
+    margin: 5%;
 }
 
+#offer span {
+    font-size: 5vh;
+}
+
+/*-----------#background Before About Me --------------- */
+
+#backgroundBeforeAboutMe {
+    background-image: url("galleryPhotos/32.jpg");
+    min-height: 90vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5%;
+}
 
 /*-----------#AboutMeContent --------------- */
 
+#AboutMeContent{
+    margin: 5%;
+}
 #AboutMeContent img {
-    width: 30%;
-    height: 30%;
-    margin: 0 10px;
+    width: 35vw;
+    height: 70vh;
+    margin-left: 5%;
     float: right;
+
 }
 
 p {
     color: #000;
-    margin-left: 20px;
+    margin-top:5%;
     text-indent: 50px;
     text-align: justify;
     letter-spacing: 2px;
-    font-size: 1.5rem;
-    font-family: OpenSansRegular;
+    font-size: 3vh;
+    font-family: OpenSansRegular, sans-serif;
 }
 
+/*-----------GROUP OF IMAGES BEFORE CONTACT--------------- */
+#ImgBefContContainer {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    clear: both;
+    margin: 5%;
+}
+
+#ImgBefContContainer img {
+    height: 70vh;
+    width: 33vw;
+/*    clear: both;
+    object-fit: cover;*/
+}
 
 /*-----------SOCIAL MEDIA HREF/ICONS--------------- */
 #socialMediaIcons {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 5vh;
     border-top: 2px solid black;
 }
 
@@ -209,8 +294,10 @@ p {
 }
 
 #socialMediaIcons a i {
-    scale: 3.5;
-    margin: 80px;
+/*    scale: 3.5;*/
+    height: 10vh;
+    width: 10vh;
+    margin: 10vh;
     cursor: pointer;
 }
 

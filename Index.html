@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="IndexCss.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="§https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="ContactFormCSS.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body>
 
-
 <div class="navBarContainer" id="navBarContainer">
     <img src="img/LOGO-%20beztla-%20male.png">
     <div class="navBarContainerHrefGroup">
-        <a href="oMnie.html" class="active">O MNIE</a>
         <a href="galery.html">REALIZACJE</a>
-        <a href="Oferta.html">OFERTA</a>
-        <a href="Kontakt.html">KONTAKT</a>
+        <a>OFERTA</a>
+        <a>O&nbspMNIE</a>
+        <a>KONTAKT</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i></a>
     </div>
 </div>
+<div id="slideShowContainer">
+    <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
+    <img id="photoSlideShow" class="slideShowPhoto" src="img/1.jpg">
+    <span class="slideShowButton" onclick="scrollPhoto(1)">></span>
+</div>
 
-    <div id="slideShowContainer">
-        <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
-        <img id="photoSlideShow" class="slideShowPhoto" src="img/1.jpg">
-        <span class="slideShowButton" onclick="scrollPhoto(1)">></span>
+<div id="offer">
+    <h1>OFERTA</h1>
+    <div id="offerContent">
+        <span>MEBLE KUCHENNE</span><br><br>
+        <span>MEBLE ŁAZIENKOWE</span><br><br>
+        <span>GARDEROBY</span><br><br>
+        <span>KOMODY</span><br><br>
+        <span>SZAFY WNĘKOWE</span><br><br>
+        <span>ŁÓŻKA</span><br><br>
     </div>
+</div>
+<div id="backgroundBeforeAboutMe">
+
+</div>
+
 <div id="AboutMeContent">
     <img src="img/MeblorzPhoto.jpg">
 
@@ -56,24 +70,36 @@
 
     </p>
 </div>
+<div id="ImgBefContContainer">
+    <img src="galleryPhotos/23.jpg">
+    <img src="galleryPhotos/30.jpg">
+    <img src="galleryPhotos/31.jpg">
+</div>
 
-<div id="contact">
-    <div>
-        <h1 class="headings">KONTAKT<br><br></h1>
-        <p><span>telefon:792972255<br><br></span></p>
-        <p><span>email:meblorzmateusz@gmail.com<br><br></span></p>
+<div id="contactContainer">
+    <div id="contact">
+        <div>
+            <h1 class="headings">KONTAKT</h1>
+            <div>
+                <span>telefon:<br></span>
+                <span>792972255</span><br><br>
+                <span>email:</span><br>
+                <span>meblorzmateusz@gmail.com</span>
+            </div>
+
+        </div>
+        <form target="_blank" action="https://formsubmit.co/dagmarastepak@gmail.com" enctype="multipart/form-data"
+              method="POST" class="form">
+            <input type="text" name="name" class="input" placeholder="Imie">
+            <input type="hidden" name="_subject" value="New Email">
+            <input type="email" name="email" class="input" placeholder="Email" required>
+            <input type="phone" name="phone" class="input" placeholder="Numer Telefonu">
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Treść wiadomości" required></textarea>
+            <input id="attachment" type="file" name="attachment" accept="image/png, image/jpeg">
+            <input type="submit" value="WYŚLIJ" id="send">
+            <input type="hidden" name="_next" value="https://dgstach.github.io/Index.html">
+        </form>
     </div>
-    <form target="_blank" action="https://formsubmit.co/dagmarastepak@gmail.com" enctype="multipart/form-data"
-          method="POST" class="form">
-        <input type="text" name="name" class="input" placeholder="Imie">
-        <input type="hidden" name="_subject" value="New Email">
-        <input type="email" name="email" class="input" placeholder="Email" required>
-        <input type="phone" name="phone" class="input" placeholder="Numer Telefonu">
-        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Treść wiadomości" required></textarea>
-        <input id="attachment" type="file" name="attachment" accept="image/png, image/jpeg">
-        <input type="submit" value="WYŚLIJ" id="send">
-        <input type="hidden" name="_next" value="https://dgstach.github.io/Index.html">
-    </form>
 </div>
 
 <div id="socialMediaIcons">
@@ -85,8 +111,14 @@
     </a>
 </div>
 
+<i class="fa fa-facebook-square fa-sm" aria-hidden="true"></i>
+<i class="fa fa-facebook-square fa-sm" aria-hidden="true"></i>
+
+
+
 <script>
     var imgNumber;
+
     function myFunction() {
         var x = document.getElementById("navBarContainer");
         if (x.className === "navBarContainer") {
@@ -101,13 +133,14 @@
         const maxImgNumber = 5;
         const imgElement = document.getElementById('photoSlideShow');
 
-        const imgNumber = imgElement.getAttribute('src').replace('img/','').replace('.jpg','');
+        const imgNumber = imgElement.getAttribute('src').replace('img/', '').replace('.jpg', '');
         let nextImgNumber = Number(imgNumber) + counter;
 
         nextImgNumber = nextImgNumber === minImgNumber - 1 ? maxImgNumber : nextImgNumber;
         nextImgNumber = nextImgNumber === maxImgNumber + 1 ? minImgNumber : nextImgNumber;
 
         document.getElementById('photoSlideShow').setAttribute('src', `img/${nextImgNumber}.jpg`);
+
     }
 
 
