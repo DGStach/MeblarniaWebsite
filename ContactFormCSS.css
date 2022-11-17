@@ -4,15 +4,17 @@
     margin:5%;
 }
 
-#contactContainer /*h1 */
-{
+#contactContainer h1{
     /*  padding: 50px;
       text-align: center;*/
+    font-family: 'Raleway', sans-serif;
+
 }
 
 #contact {
     display: flex;
     column-gap: 30%;
+
     /*justify-content: center;*/
 }
 
@@ -30,6 +32,8 @@
     font-family: raleway, sans-serif;
     */
   margin-top: 5vh;
+    font-family: 'Open Sans', sans-serif;
+
 
 }
 
@@ -47,15 +51,19 @@
     border: 3px black solid;
     border-radius: 10px;
     font-size: 2rem;
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
-#attachment {
+#attachment{
     border: 0px;
     font-size: 2rem;
+    border-radius: 6px;
+    border: 3px solid #dcdcdc;
+
 }
 
-#send {
+#send  {
     box-shadow: inset 0px 1px 0px 0px #ffffff;
     background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
     background-color: #f9f9f9;
@@ -64,7 +72,7 @@
     display: inline-block;
     cursor: pointer;
     color: #666666;
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     font-weight: bold;
     padding: 10px 24px;
@@ -73,7 +81,7 @@
     margin-bottom: 50px;
 }
 
-#send:hover {
+#send:hover #attachment:hover {
     background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
     background-color: #e9e9e9;
 }
