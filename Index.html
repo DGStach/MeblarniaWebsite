@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="IndexCss.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="§https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="ContactFormCSS.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Inconsolata|Droid+Sans">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap"
+          rel="stylesheet">
 <body>
+
+
 
 <div class="navBarContainer" id="navBarContainer">
     <img src="img/LOGO-%20beztla-%20male.png">
     <div class="navBarContainerHrefGroup">
         <a href="galery.html">REALIZACJE</a>
-        <a>OFERTA</a>
-        <a>O&nbspMNIE</a>
-        <a>KONTAKT</a>
+        <a id="offerNavbar">OFERTA</a>
+        <a id="aboutMeNavbar">O&nbspMNIE</a>
+        <a id="contactNavbar">KONTAKT</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i></a>
     </div>
 </div>
 <div id="slideShowContainer">
     <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
-    <img id="photoSlideShow" class="slideShowPhoto" src="img/1.jpg">
+    <img id="photoSlideShow" class="slideShowPhoto" src="img/1.webp" alt="img/1.webp">
     <span class="slideShowButton" onclick="scrollPhoto(1)">></span>
 </div>
 
@@ -41,12 +43,9 @@
         <span>ŁÓŻKA</span><br><br>
     </div>
 </div>
-<div id="backgroundBeforeAboutMe">
-
-</div>
-
-<div id="AboutMeContent">
-    <img src="img/MeblorzPhoto.jpg">
+<div id="backgroundBeforeAboutMe"></div>
+<div id="AboutMe">
+    <img src="img/MeblorzPhoto.jpg" alt="MeblorzPhoto">
 
     <p>
         Cześć, to ja – Mateusz.
@@ -62,15 +61,13 @@
         montażem mebli. Przykładam dużą uwagę do detali i&nbspnie toleruję fuszerki. Pracuję na materiałach wysokiej
         jakości
         i&nbspdbam o&nbspto, by na koniec pracy nawet najbardziej perfekcyjny klient był usatysfakcjonowany.
-
     </p>
     <p>
         Jeśli więc potrzebujesz szafek do kuchni, salonu czy łazienki, chciałbyś zabudować nieustawną wnękę czy poddasze
         lub
-        po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłu - odezwij się,
+        po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłui&nb-i&nbodezwij się,
         razem na
         pewno coś temu zaradzimy!
-
     </p>
 </div>
 <div id="ImgBefContContainer">
@@ -84,7 +81,7 @@
         <div>
             <h1 class="headings">KONTAKT</h1>
             <div>
-                <span><br><br<br>telefon:<br></span>
+                <span><br><br><br>telefon:<br></span>
                 <span>792972255</span><br><br>
                 <span>email:</span><br>
                 <span>meblorzmateusz@gmail.com</span>
@@ -98,30 +95,54 @@
             <input type="email" name="email" class="input" placeholder="Email" required>
             <input type="phone" name="phone" class="input" placeholder="Numer Telefonu">
             <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Treść wiadomości" required></textarea>
-            <input id="attachment" type="file" name="attachment" accept="image/png, image/jpeg">
-            <input type="submit" value="WYŚLIJ" id="send">
             <input type="hidden" name="_next" value="https://dgstach.github.io/Index.html">
+            <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected"
+                   multiple/>
+            <label id="choseFilesBtn" for="file">Wybierz Pliki</label><br>
+            <div id="selectedFiles"></div>
+            <input type="submit" value="WYŚLIJ" id="send">
         </form>
     </div>
+</div>
+<div id="scrollArrowContainer">
+    <img id="aArrowIcon" src="img/scrollToNavbarIcon.svg" alt="scrollIcon">
 </div>
 
 <div id="socialMediaIcons">
     <a href="https://www.instagram.com/meblorz_mateusz/">
-        <i class="fa fa-instagram fa-sm" aria-hidden="true"></i>
+        <img src="img/insta.svg" alt="instaIcon">
     </a>
     <a href="https://www.facebook.com/meblorzmateusz">
-        <i class="fa fa-facebook-square fa-sm" aria-hidden="true"></i>
+        <img src="img/fb.svg" alt="fbIcon">
     </a>
 </div>
+<script>
 
-<i class="fa fa-facebook-square fa-sm" aria-hidden="true"></i>
-<i class="fa fa-facebook-square fa-sm" aria-hidden="true"></i>
+/* -----click on offer on the top Navbar -> scroll to offer content on the page ------*/
+    document.getElementById('offerNavbar').addEventListener('click',()=>{
+        window.scrollTo(0,document.getElementById('offer').offsetTop);
+    });
+/* -----click on contact on the top Navbar -> scroll to contact content on the page ------*/
+    document.getElementById('contactNavbar').addEventListener('click',()=>{
+        window.scrollTo(0,document.getElementById('contact').offsetTop);
+    });
 
+/* -----click on about Me on the top Navbar -> scroll to AboutMe content on the page ------*/
+document.getElementById('aboutMeNavbar').addEventListener('click',()=>{
+        window.scrollTo(0,document.getElementById('AboutMe').offsetTop);
+    });
 
+</script>
 
 <script>
-    var imgNumber;
+    /* ----Function - scroll page to the top - position (0,0) ---- */
+    let aArrowIcon = document.getElementById("aArrowIcon");
+    aArrowIcon.onclick = function () {
+        scrollTo(0, 0)
+    };
+</script>
 
+<script>
     function myFunction() {
         var x = document.getElementById("navBarContainer");
         if (x.className === "navBarContainer") {
@@ -130,39 +151,59 @@
             x.className = "navBarContainer";
         }
     }
-
     const scrollPhoto = (counter) => {
-        const minImgNumber = 1;
-        const maxImgNumber = 5;
         const imgElement = document.getElementById('photoSlideShow');
-
+        const imgNumber = imgElement.getAttribute('src').replace('img/','').replace('.webp','');
+        console.log(imgElement.getAttribute('src'));
+        const minImgNumber = 1;
+        const maxImgNumber = 3;
+/*
         const imgNumber = imgElement.getAttribute('src').replace('img/', '').replace('.jpg', '');
+*/
         let nextImgNumber = Number(imgNumber) + counter;
-
         nextImgNumber = nextImgNumber === minImgNumber - 1 ? maxImgNumber : nextImgNumber;
         nextImgNumber = nextImgNumber === maxImgNumber + 1 ? minImgNumber : nextImgNumber;
-
+/*
         document.getElementById('photoSlideShow').setAttribute('src', `img/${nextImgNumber}.jpg`);
+*/
+        document.getElementById('photoSlideShow').setAttribute('src', `img/${nextImgNumber}.webp`);
 
-    }
+    };
+
+    var a = document.getElementById("file");
+    Object.values(a.files).forEach((el) => {
+        console.log(el.name);
+    });
+    let selFilesContainer = document.getElementById("selectedFiles");
+    a.addEventListener('change', (selectedFiles) => {
+        selectedFiles = "";
+        Object.values(a.files).forEach((el) => {
+            console.log(el.name);
+            let s = document.createElement('span');
+            s.innerHTML = el.name;
+            s.className = 'fileText';
+            let br = document.createElement('br');
+            selFilesContainer.appendChild(s);
+            selFilesContainer.appendChild(br);
+        });
+    });
 
 
-    // const scrollPhoto = (counter) => {
-    //     let imgLocation = document.getElementById('photoSlideShow').getAttribute('src')
-    //     imgLocation=imgLocation.replace('img/','');
-    //     imgNumber = imgLocation.replace('.jpg','');
-    //     imgNumber = Number(imgNumber);
-    //     imgNumber += counter;
-    //     if (imgNumber === 6){
-    //         imgNumber = 1;
-    //     }
-    //     if (imgNumber === 0){
-    //         imgNumber = 5;
-    //     }
-    //     imgLocation = "img/" + imgNumber +".jpg"
-    //     document.getElementById('photoSlideShow').setAttribute('src', imgLocation);
-    //
-    //
-    // }
+    //const scrollPhoto = (counter) => {
+    // // let imgLocation = document.getElementById('photoSlideShow').getAttribute('src')
+    // // imgLocation=imgLocation.replace('img/','');
+    // // imgNumber = imgLocation.replace('.jpg','');
+    // // imgNumber = Number(imgNumber);
+    // // imgNumber += counter;
+    // // if (imgNumber === 6){
+    // // imgNumber = 1;
+    // // }
+    // // if (imgNumber === 0){
+    // // imgNumber = 5;
+    // // }
+    // // imgLocation = "img/" + imgNumber +".jpg"
+    // // document.getElementById('photoSlideShow').setAttribute('src', imgLocation);
+    //}
 </script>
 </body>
+</html>

@@ -1,11 +1,15 @@
 /*-----------NAVBAR CSS--------------- */
-/*galeria pierwsze piec czy iles zdjec kreci sie w kolko nie przechodzi widok do kolejnych img
-pozostale elementy z paska zawsze na srodku
+/**! pozostale elementy z paska zawsze na srodku
 przy waskim ekranie spany ustawiaja sie w pionie razem ze zdjeciem w slide show
 wystylizowac przycisk wyslij i zalacznika tak samo
 form zeby nie wystawał na marginesy;
 dodaj takie same czcionki.
-*/
+okno w połowie podczas scrollowanie dociagniecie strony
+scrolowanie z ostaniej strony do gory
+wysuwanie top bara jak podjade myszka czy na stale caly czas u gory]
+ustawic min i max width jak rozszrzam to zeby wysokosc tez rosła
+
+*!*/
 
 
 /*https://codepen.io/kevray_39/pen/dyPjgjP*/
@@ -61,6 +65,10 @@ dodaj takie same czcionki.
     }
 }*/
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     /* margin: 0 20%;*/
     /*
@@ -80,6 +88,7 @@ h1{
     margin-inline-start: 0;
     margin-inline-end: 0;
     font-weight: bold;
+
 }
 
 /*-----------TOP NAVBAR --------------- */
@@ -115,7 +124,7 @@ box-sizing: border-box;
     width: 15vh;
     min-height: 80px;
     min-width: 80px;
-    margin: 2% 0% 0% 5%;
+    margin: 2% 0 0 5%;
  /*   position: absolute;
     position:fixed;
     float: left;*/
@@ -192,18 +201,30 @@ margin:1% 5% 5% 5%;
 #slideShowContainer img {
     display: flex;
 /*    justify-content: center;*/
-width: 100vw;
-    height: 80vh;
+
 /*    vertical-align: middle;*/
 /*    object-fit: cover;
     z-index: 0;
 !*    padding: 30px;*!*!*/
+
+/*    width: 100vw;
+    height: 80vh;*/
+
+   /* max-width: 100%;
+    height: auto;*/
+/*
+    width: 980px;
+    height: 590px;
+    object-fit: cover;*/
+  /*  object-position: 50% 50%;*/
+    /*background-color: red;*/
+    height: 80vh;
+    width: 90vw;
 }
 
 #slideShowContainer span {
     color: antiquewhite;
   /*  color: black;*/
-    font-size: 70px;
     cursor: pointer;
     font-size: 10vh;
 }
@@ -235,7 +256,7 @@ width: 100vw;
 
 #offer h1{
     font-family: 'Raleway', sans-serif;
-    color: red;
+    color: black;
 }
 
 #offer span {
@@ -258,10 +279,10 @@ width: 100vw;
 
 /*-----------#AboutMeContent --------------- */
 
-#AboutMeContent{
+#AboutMe{
     margin: 5%;
 }
-#AboutMeContent img {
+#AboutMe img {
     width: 35vw;
     height: 70vh;
     margin-left: 5%;
@@ -295,11 +316,25 @@ p {
     object-fit: cover;*/
 }
 
+/*-----------SCROLL TO NAVBAR ICON--------------- */
+#scrollArrowContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#scrollArrowContainer img{
+    margin: 5px;
+    height: 10vh;
+    width: 10vh;
+    cursor: pointer;
+}
+
+
 /*-----------SOCIAL MEDIA HREF/ICONS--------------- */
 #socialMediaIcons {
     display: flex;
     justify-content: center;
-    padding: 5vh;
+ /*   padding: 5vh;*/
     border-top: 2px solid black;
 }
 
@@ -307,11 +342,10 @@ p {
     text-decoration: none;
 }
 
-#socialMediaIcons a i {
-/*    scale: 3.5;*/
-    height: 10vh;
-    width: 10vh;
-    margin: 10vh;
+#socialMediaIcons a img {
+    height: 5vh;
+    width: 5vh;
+    margin: 5vh;
     cursor: pointer;
 }
 

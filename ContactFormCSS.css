@@ -4,66 +4,46 @@
     margin:5%;
 }
 
-#contactContainer h1{
-    /*  padding: 50px;
-      text-align: center;*/
-    font-family: 'Raleway', sans-serif;
+/*input#file-upload-button {
+    color:blueviolet ;
+}*/
 
+#contactContainer h1{
+    font-family: 'Raleway', sans-serif;
 }
 
 #contact {
-    display: flex;
-    column-gap: 30%;
-
+    display: inline-block;
+    column-gap: 5vw;
     /*justify-content: center;*/
 }
 
-#contact div {
-    /*
-    justify-content: flex-start;
-    */
-    /*   color: black;*/
-}
 
 #contact div span{
-    font-size: 2.5vh;
-   /* color:red;*/
-    /*
-    font-family: raleway, sans-serif;
-    */
-  margin-top: 5vh;
+    font-size: 2rem;
+    margin-top: 5vh;
     font-family: 'Open Sans', sans-serif;
-
-
+    color: #666666;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-
 }
 
-.form input, textarea {
-    margin: 1%;
-    padding: 20px 5vw 20px 5vw;
-    /*   width: 80%; jak ma sie do tego border box i z jakiej wielkosci bierze width, i
-      czemu nie jest wycentrowane po ustawieniu marginesu left and right nie jest na srodku */
+.form input, textarea{
+    padding: 20px 0 20px 5vw;
     border: 3px black solid;
     border-radius: 10px;
     font-size: 2rem;
     font-family: 'Open Sans', sans-serif;
+    color: red;
+    margin: 2px 0;
+   max-width: 50%;
+    min-width:30%;
 
 }
-
-#attachment{
-    border: 0px;
-    font-size: 2rem;
-    border-radius: 6px;
-    border: 3px solid #dcdcdc;
-
-}
-
-#send  {
+#send, #choseFilesBtn {
     box-shadow: inset 0px 1px 0px 0px #ffffff;
     background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
     background-color: #f9f9f9;
@@ -73,20 +53,39 @@
     cursor: pointer;
     color: #666666;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 3vh;
     font-weight: bold;
-    padding: 10px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
-    margin-bottom: 50px;
+    margin: 5px 0px;
 }
 
-#send:hover #attachment:hover {
+
+#send:hover, #choseFilesBtn:active {
     background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
     background-color: #e9e9e9;
 }
 
-#send:active {
+#send:active, #choseFilesBtn:active {
     position: relative;
     top: 1px;
+}
+#choseFilesBtn {
+    width: 300px;
+    text-align:center;
+}
+
+.inputfile {
+    height: 0.1px;
+    width: 0.1px;
+    opacity: 0;
+    z-index: -1;
+}
+.selectedFiles{
+    margin: 1%;
+    padding: 20px 5vw 20px 5vw;
+    border: 3px black solid;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
 }
