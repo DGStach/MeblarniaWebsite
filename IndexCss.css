@@ -65,7 +65,7 @@ ustawic min i max width jak rozszrzam to zeby wysokosc tez rosła
     }
 }*/
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -76,13 +76,14 @@ body {
     */
 
 }
-h1{
-    font-size: 9vh;
-    color:black;
+
+h1 {
+    display: grid;
+    grid-column:span 2;
+    color: black;
     font-family: 'Raleway', sans-serif;
     margin-left: 5vw;
-
-    display: block;
+/*    display: block;*/
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0;
@@ -94,11 +95,11 @@ h1{
 /*-----------TOP NAVBAR --------------- */
 
 .navBarContainer {
- /*   overflow: hidden;*/
-   /* padding: 10px 50px;*/
+       overflow: hidden;
+     padding: 10px 50px;
     display: flex;
-/*    align-items: center;*/
-/*    margin:1% 5% 0% 5%;*/
+        align-items: center;
+        margin:1% 5% 0% 5%;
 }
 
 .navBarContainerHrefGroup {
@@ -106,15 +107,15 @@ h1{
     /*
     background-color: #666666;
     */
-     /*
-     font-size: 10vh;
-     */
+    /*
+    font-size: 10vh;
+    */
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: row;
     margin-left: 15%;
-box-sizing: border-box;
-    cursor:pointer;
+    box-sizing: border-box;
+    cursor: pointer;
     align-items: center;
 
 }
@@ -125,9 +126,9 @@ box-sizing: border-box;
     min-height: 80px;
     min-width: 80px;
     margin: 2% 0 0 5%;
- /*   position: absolute;
-    position:fixed;
-    float: left;*/
+    /*   position: absolute;
+       position:fixed;
+       float: left;*/
 
 
 }
@@ -189,34 +190,34 @@ box-sizing: border-box;
 
 /* ---------------   slideShowContainer------------*/
 #slideShowContainer {
-   /* text-align: center;*/
+    /* text-align: center;*/
     /*
     object-fit: cover;
     */
-margin:1% 5% 5% 5%;
+    margin: 1% 5% 5% 5%;
     display: flex;
-        justify-content: center;
+    justify-content: center;
 }
 
 #slideShowContainer img {
     display: flex;
-/*    justify-content: center;*/
+    /*    justify-content: center;*/
 
-/*    vertical-align: middle;*/
-/*    object-fit: cover;
-    z-index: 0;
-!*    padding: 30px;*!*!*/
+    /*    vertical-align: middle;*/
+    /*    object-fit: cover;
+        z-index: 0;
+    !*    padding: 30px;*!*!*/
 
-/*    width: 100vw;
-    height: 80vh;*/
+    /*    width: 100vw;
+        height: 80vh;*/
 
-   /* max-width: 100%;
-    height: auto;*/
-/*
-    width: 980px;
-    height: 590px;
-    object-fit: cover;*/
-  /*  object-position: 50% 50%;*/
+    /* max-width: 100%;
+     height: auto;*/
+    /*
+        width: 980px;
+        height: 590px;
+        object-fit: cover;*/
+    /*  object-position: 50% 50%;*/
     /*background-color: red;*/
     height: 80vh;
     width: 90vw;
@@ -224,7 +225,7 @@ margin:1% 5% 5% 5%;
 
 #slideShowContainer span {
     color: antiquewhite;
-  /*  color: black;*/
+    /*  color: black;*/
     cursor: pointer;
     font-size: 10vh;
 }
@@ -236,6 +237,7 @@ margin:1% 5% 5% 5%;
     right: 8vw;
     top: 50vh;
 }
+
 #slideShowContainer span:first-child {
     position: absolute;
     z-index: 100;
@@ -243,25 +245,35 @@ margin:1% 5% 5% 5%;
     top: 50vh;
 
 }
+
 /*-----------#OFFER --------------- */
 #offer {
 
-    display: flex;
+   /* display: flex;*/
     /* padding: 50px; */
-    align-items: center;
-    column-gap: 30%;
+    display: grid;
+    grid-column: 1/-1;
+
+ /*   align-items: center;
+    column-gap: 30%;*/
     /* justify-content: center; */
     margin: 5%;
 }
+#offerContent{
+    grid-column:span 2;
+}
 
-#offer h1{
+#offer h1 {
     font-family: 'Raleway', sans-serif;
     color: black;
+    grid-column:span 2;
 }
 
 #offer span {
     font-size: 5vh;
     font-family: 'Open Sans', sans-serif;
+
+
 
 }
 
@@ -279,31 +291,62 @@ margin:1% 5% 5% 5%;
 
 /*-----------#AboutMeContent --------------- */
 
-#AboutMe{
+#AboutMe {
     margin: 5%;
 }
+
 #AboutMe img {
     width: 35vw;
     height: 70vh;
     margin-left: 5%;
     float: right;
-
 }
-
 p {
     color: #000;
-    margin-top:5%;
+    margin-top: 5%;
     text-indent: 50px;
     text-align: justify;
     letter-spacing: 2px;
-    font-size: 3vh;
     font-family: 'Open Sans', sans-serif;
+    /* ----- romiar czcionki dla wielkosci od 3001px do nieskończoności ---- */
+    font-size: calc(40px + 10 * (0.1vw - 3px));
 }
+@media screen and (max-width: 3000px) {
+    p {
+        font-size: calc(30px + 10 * (0.1vw - 2px));
+        background-color: pink;
+    }
+}
+@media screen and (max-width: 2000px) {
+    p {
+    font-size: calc(15px + 15 * (100vw - 1000px)/(1000));
+    background-color: lightblue;
+    }
+}
+@media screen and (max-width: 1000px) {
+    p {
+        /*
+        font-size: calc(18px + 6 * ((100vw - 320px) /(1000 - 320)));
+        */
+        font-size: 16px;
+        background-color: lightgreen;
+    }
+}
+/*@media screen and (max-width: 320px) {
+    p {
+        font-size: 16px;
+        background-color: yellow;
+    }
+}*/
+
+
 
 /*-----------GROUP OF IMAGES BEFORE CONTACT--------------- */
 #ImgBefContContainer {
     display: flex;
+    /*
     justify-content: center;
+    */
     object-fit: cover;
     clear: both;
     margin: 5%;
@@ -312,17 +355,152 @@ p {
 #ImgBefContContainer img {
     height: 70vh;
     width: 33vw;
-/*    clear: both;
-    object-fit: cover;*/
+    /*    clear: both;
+        object-fit: cover;*/
 }
 
-/*-----------SCROLL TO NAVBAR ICON--------------- */
-#scrollArrowContainer{
+/*-----------CONTACT SECTION--------------- */
+#contact {
+    display: flex;
+    column-gap: 10vw;
+    /*
+    justify-content: center;
+    */
+    margin: 5%;
+}
+
+#contact div div {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+  /*  margin-left: 5vw;*/
+}
+
+formContainer {
+    width: 50vw;
     display: flex;
     justify-content: center;
 }
 
-#scrollArrowContainer img{
+.contactForm {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    padding: 10px 0 10px 5vw;
+    border: 3px black solid;
+    border-radius: 7px;
+    margin: 2px 0;
+    min-width: 300px;
+    max-width: 600px;
+    width: 30vw;
+}
+
+#contact form label, #send {
+    border: 3px black solid;
+    padding: 8px 10px;
+    border-radius: 7px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #666666;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+}
+
+.choseFileButtonHide {
+    height: 0.1px;
+    width: 0.1px;
+    opacity: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+    #contact {
+        display: block;
+        width: 100%;
+    }
+
+    #contact form {
+        display: block;
+        margin-left: 5vw;
+        font-size: 1.5rem
+    }
+
+    #offer {
+        display: block;
+        margin-bottom: 5%;
+    }
+
+    #contact div div {
+        font-size: 1.5rem;
+    }
+
+    .contactForm {
+        width: 70vw;
+    }
+
+    #ImgBefContContainer img:nth-child(1), img:nth-child(3) {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    #ImgBefContContainer img:nth-child(2) {
+        display: none;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .navBarContainerHrefGroup{
+        display:block;
+    }
+    navBarContainer a {
+        font-size: 4vw;
+    }
+
+    h1 {
+        font-size: 14vw;
+    }
+
+    #offer span {
+        font-size: 3vh;
+    }
+    #backgroundBeforeAboutMe {
+        background-image: url("galleryPhotos/31.jpg");
+        min-height: 90vh;
+        object-fit: cover;
+        width: 100%;
+    }
+    #AboutMe img {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    #ImgBefContContainer img:nth-child(2), img:nth-child(3) {
+        display: none;
+        z-index: -1;
+    }
+
+    #ImgBefContContainer img:nth-child(1) {
+        object-fit: cover;
+        /*margin: 5%;*/
+        width: 100%;
+    }
+
+
+    .contactForm {
+        min-width: 250px;
+        background-color: lightblue;
+    }
+}
+
+/*-----------SCROLL TO NAVBAR ICON--------------- */
+#scrollArrowContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#scrollArrowContainer img {
     margin: 5px;
     height: 10vh;
     width: 10vh;
@@ -334,7 +512,7 @@ p {
 #socialMediaIcons {
     display: flex;
     justify-content: center;
- /*   padding: 5vh;*/
+    /*   padding: 5vh;*/
     border-top: 2px solid black;
 }
 
@@ -363,3 +541,4 @@ p {
     font-family: OpenSansRegular;
     src: url(fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
 }
+@import url(https://fonts.googleapis.com/css?family=Raleway);
