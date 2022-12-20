@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="IndexCss.css" type="text/css" rel="stylesheet">
-    <link href="ContactFormCSS.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Inconsolata|Droid+Sans">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,19 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap"
           rel="stylesheet">
 <body>
-
-
-
 <div class="navBarContainer" id="navBarContainer">
-    <img src="img/LOGO-%20beztla-%20male.png">
-    <div class="navBarContainerHrefGroup">
-        <a href="galery.html">REALIZACJE</a>
-        <a id="offerNavbar">OFERTA</a>
-        <a id="aboutMeNavbar">O&nbspMNIE</a>
-        <a id="contactNavbar">KONTAKT</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i></a>
-    </div>
+        <div>
+            <img src="img/LOGO-%20beztla-%20male.png">
+        </div>
+        <div class="navBarContainerHrefGroup">
+            <a href="galery.html">REALIZACJE</a>
+            <a id="offerNavbar">OFERTA</a>
+            <a id="aboutMeNavbar">O&nbspMNIE</a>
+            <a id="contactNavbar">KONTAKT</a>
+        </div>
 </div>
 <div id="slideShowContainer">
     <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
@@ -35,12 +31,12 @@
 <div id="offer">
     <h1>OFERTA</h1>
     <div id="offerContent">
-        <span>MEBLE KUCHENNE</span><br><br>
-        <span>MEBLE ŁAZIENKOWE</span><br><br>
-        <span>GARDEROBY</span><br><br>
-        <span>KOMODY</span><br><br>
-        <span>SZAFY WNĘKOWE</span><br><br>
-        <span>ŁÓŻKA</span><br><br>
+        <span>MEBLE KUCHENNE</span><br>
+        <span>MEBLE ŁAZIENKOWE</span><br>
+        <span>GARDEROBY</span><br>
+        <span>KOMODY</span><br>
+        <span>SZAFY WNĘKOWE</span><br>
+        <span>ŁÓŻKA</span><br>
     </div>
 </div>
 <div id="backgroundBeforeAboutMe"></div>
@@ -65,7 +61,8 @@
     <p>
         Jeśli więc potrzebujesz szafek do kuchni, salonu czy łazienki, chciałbyś zabudować nieustawną wnękę czy poddasze
         lub
-        po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłui&nb-i&nbodezwij się,
+        po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłu&nbsp-&nbspodezwij
+        się,
         razem na
         pewno coś temu zaradzimy!
     </p>
@@ -75,37 +72,38 @@
     <img src="galleryPhotos/30.jpg">
     <img src="galleryPhotos/31.jpg">
 </div>
-
-<div id="contactContainer">
-    <div id="contact">
+<div id="contact">
+    <div>
         <div>
             <h1 class="headings">KONTAKT</h1>
-            <div>
-                <span><br><br><br>telefon:<br></span>
-                <span>792972255</span><br><br>
-                <span>email:</span><br>
-                <span>meblorzmateusz@gmail.com</span>
-            </div>
-
+            <span><br><br><br>telefon:<br></span>
+            <span>792972255</span><br><br>
+            <span>email:</span><br>
+            <span>meblorzmateusz@gmail.com</span><br><br>
         </div>
+
+    </div>
+    <div id="formContainer">
         <form target="_blank" action="https://formsubmit.co/dagmarastepak@gmail.com" enctype="multipart/form-data"
               method="POST" class="form">
-            <input type="text" name="name" class="input" placeholder="Imie">
+            <input type="text" name="name" class="input, contactForm" placeholder="Imie"><br>
             <input type="hidden" name="_subject" value="New Email">
-            <input type="email" name="email" class="input" placeholder="Email" required>
-            <input type="phone" name="phone" class="input" placeholder="Numer Telefonu">
-            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Treść wiadomości" required></textarea>
-            <input type="hidden" name="_next" value="https://dgstach.github.io/Index.html">
-            <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected"
-                   multiple/>
-            <label id="choseFilesBtn" for="file">Wybierz Pliki</label><br>
+            <input type="email" name="email" class="input, contactForm" placeholder="Email" required><br>
+            <input type="phone" name="phone" class="input, contactForm" placeholder="Numer Telefonu"><br>
+            <textarea class="contactForm" name="msg" id="msg" placeholder="Treść wiadomości"
+                      required></textarea><br>
+            <input type="hidden" name="_next" value="https://dgstach.github.io/MeblarniaWebsite/">
+            <input type="file" name="file" id="file" class="contactForm, choseFileButtonHide"
+                   data-multiple-caption="{count} files selected"
+                   multiple/><br>
+            <br><br><label id="choseFilesBtn" for="file">Wybierz Pliki</label><br><br>
             <div id="selectedFiles"></div>
-            <input type="submit" value="WYŚLIJ" id="send">
+            <br><input type="submit" value="WYŚLIJ" id="send">
         </form>
     </div>
 </div>
 <div id="scrollArrowContainer">
-    <img id="aArrowIcon" src="img/scrollToNavbarIcon.svg" alt="scrollIcon">
+    <br><br><br><img id="aArrowIcon" src="img/scrollToNavbarIcon.svg" alt="scrollIcon">
 </div>
 
 <div id="socialMediaIcons">
@@ -118,18 +116,18 @@
 </div>
 <script>
 
-/* -----click on offer on the top Navbar -> scroll to offer content on the page ------*/
-    document.getElementById('offerNavbar').addEventListener('click',()=>{
-        window.scrollTo(0,document.getElementById('offer').offsetTop);
+    /* -----click on offer on the top Navbar -> scroll to offer content on the page ------*/
+    document.getElementById('offerNavbar').addEventListener('click', () => {
+        window.scrollTo(0, document.getElementById('offer').offsetTop);
     });
-/* -----click on contact on the top Navbar -> scroll to contact content on the page ------*/
-    document.getElementById('contactNavbar').addEventListener('click',()=>{
-        window.scrollTo(0,document.getElementById('contact').offsetTop);
+    /* -----click on contact on the top Navbar -> scroll to contact content on the page ------*/
+    document.getElementById('contactNavbar').addEventListener('click', () => {
+        window.scrollTo(0, document.getElementById('contact').offsetTop);
     });
 
-/* -----click on about Me on the top Navbar -> scroll to AboutMe content on the page ------*/
-document.getElementById('aboutMeNavbar').addEventListener('click',()=>{
-        window.scrollTo(0,document.getElementById('AboutMe').offsetTop);
+    /* -----click on about Me on the top Navbar -> scroll to AboutMe content on the page ------*/
+    document.getElementById('aboutMeNavbar').addEventListener('click', () => {
+        window.scrollTo(0, document.getElementById('AboutMe').offsetTop);
     });
 
 </script>
@@ -151,21 +149,22 @@ document.getElementById('aboutMeNavbar').addEventListener('click',()=>{
             x.className = "navBarContainer";
         }
     }
+
     const scrollPhoto = (counter) => {
         const imgElement = document.getElementById('photoSlideShow');
-        const imgNumber = imgElement.getAttribute('src').replace('img/','').replace('.webp','');
+        const imgNumber = imgElement.getAttribute('src').replace('img/', '').replace('.webp', '');
         console.log(imgElement.getAttribute('src'));
         const minImgNumber = 1;
         const maxImgNumber = 3;
-/*
-        const imgNumber = imgElement.getAttribute('src').replace('img/', '').replace('.jpg', '');
-*/
+        /*
+                const imgNumber = imgElement.getAttribute('src').replace('img/', '').replace('.jpg', '');
+        */
         let nextImgNumber = Number(imgNumber) + counter;
         nextImgNumber = nextImgNumber === minImgNumber - 1 ? maxImgNumber : nextImgNumber;
         nextImgNumber = nextImgNumber === maxImgNumber + 1 ? minImgNumber : nextImgNumber;
-/*
-        document.getElementById('photoSlideShow').setAttribute('src', `img/${nextImgNumber}.jpg`);
-*/
+        /*
+                document.getElementById('photoSlideShow').setAttribute('src', `img/${nextImgNumber}.jpg`);
+        */
         document.getElementById('photoSlideShow').setAttribute('src', `img/${nextImgNumber}.webp`);
 
     };
@@ -187,23 +186,6 @@ document.getElementById('aboutMeNavbar').addEventListener('click',()=>{
             selFilesContainer.appendChild(br);
         });
     });
-
-
-    //const scrollPhoto = (counter) => {
-    // // let imgLocation = document.getElementById('photoSlideShow').getAttribute('src')
-    // // imgLocation=imgLocation.replace('img/','');
-    // // imgNumber = imgLocation.replace('.jpg','');
-    // // imgNumber = Number(imgNumber);
-    // // imgNumber += counter;
-    // // if (imgNumber === 6){
-    // // imgNumber = 1;
-    // // }
-    // // if (imgNumber === 0){
-    // // imgNumber = 5;
-    // // }
-    // // imgLocation = "img/" + imgNumber +".jpg"
-    // // document.getElementById('photoSlideShow').setAttribute('src', imgLocation);
-    //}
 </script>
 </body>
 </html>

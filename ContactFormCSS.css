@@ -1,3 +1,4 @@
+
 /* CONTACT SECTION */
 #contactContainer {
     clear: both;
@@ -13,15 +14,14 @@
 }
 
 #contact {
-    display: inline-block;
-    column-gap: 5vw;
+/*    display: inline-block;*/
+    /*column-gap: 5vw;*/
     /*justify-content: center;*/
 }
 
 
 #contact div span{
     font-size: 2rem;
-    margin-top: 5vh;
     font-family: 'Open Sans', sans-serif;
     color: #666666;
 }
