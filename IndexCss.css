@@ -33,23 +33,15 @@ h1 {
 }
 
 /*-----------TOP NAVBAR --------------- */
-
 .navBarContainer {
     overflow: hidden;
-    padding: 10px 50px;
+   /* padding: 10px 50px;*/
     display: flex;
     align-items: center;
     margin: 1% 5% 0% 5%;
 }
 
 .navBarContainerHrefGroup {
-
-    /*
-    background-color: #666666;
-    */
-    /*
-    font-size: 10vh;
-    */
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: row;
@@ -74,10 +66,10 @@ h1 {
     padding: 0 1.5vw;
     text-decoration: none;
     font-size: 2vw;
+    font-size: calc(15px + 3*(0.8vw - 4px));
     font-family: sans-serif;
 
 }
-
 .navBarContainer a:hover {
     color: dimgrey;
     transition: color 0.5s ease 0s;
@@ -87,10 +79,20 @@ h1 {
     color: dimgrey;
 }
 
-.navBarContainer .icon {
-    display: none;
+@media screen and (max-width: 600px){
+    .navBarContainer a:nth-child(2), a:nth-child(3){
+        display: none;
+        color: red;
+        z-index: -1;
+    }
+    .navBarContainer {
+        margin: 1% 2% 0% 2%;
+        padding: 0;
+    }
+    .navBarContainer a{
+    font-size: calc(15px + 3 * (1vw - 4px));
+    }
 }
-
 /* ---------------   slideShowContainer------------*/
 #slideShowContainer {
 
@@ -101,8 +103,8 @@ h1 {
 
 #slideShowContainer img {
     display: flex;
-    height: 80vh;
     width: 90vw;
+
 }
 
 #slideShowContainer span {
@@ -140,7 +142,6 @@ h1 {
     font-family: 'Raleway', sans-serif;
     color: black;
 }
-
 #offer span {
     font-family: 'Open Sans', sans-serif;
     font-size: calc(15px + 3 * (1.4vw - 4px));
