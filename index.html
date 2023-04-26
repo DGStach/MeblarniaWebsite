@@ -11,9 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap"
           rel="stylesheet">
 <body>
-<div class="navBarContainer" id="navBarContainer">
-        <div>
-            <img src="img/LOGO-%20beztla-%20male.png">
+<div id="mainContainer">
+    <div class="navBarContainer" id="navBarContainer">
+        <div class="navBarContainerimg">
+            <img id = "logoImg" src="img/LOGO-%20beztla-%20male.png">
         </div>
         <div class="navBarContainerHrefGroup">
             <a id="bla" href="galery.html">REALIZACJE</a>
@@ -21,98 +22,103 @@
             <a id="aboutMeNavbar">O&nbspMNIE</a>
             <a id="contactNavbar">KONTAKT</a>
         </div>
-</div>
-<div id="slideShowContainer">
-    <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
-    <img id="photoSlideShow" class="slideShowPhoto" src="img/1.webp" alt="img/1.webp">
-    <span class="slideShowButton" onclick="scrollPhoto(1)">></span>
-</div>
-
-<div id="offer">
-    <h1>OFERTA</h1>
-    <div id="offerContent">
-        <span>MEBLE KUCHENNE</span><br>
-        <span>MEBLE ŁAZIENKOWE</span><br>
-        <span>GARDEROBY</span><br>
-        <span>KOMODY</span><br>
-        <span>SZAFY WNĘKOWE</span><br>
-        <span>ŁÓŻKA</span><br>
     </div>
-</div>
-<div id="backgroundBeforeAboutMe"></div>
-<div id="AboutMe">
-    <img src="img/MeblorzPhoto.jpg" alt="MeblorzPhoto">
+    <div id="slideShowContainer">
+        <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
+        <img id="photoSlideShow" class="slideShowPhoto" src="img/1.webp" alt="img/1.webp">
+        <span class="slideShowButton" onclick="scrollPhoto(1)">></span>
+    </div>
 
-    <p>
-        Cześć, to ja – Mateusz.
-        Jestem stolarzem i&nbsprobię meble. Moja pasja do tego zawodu narodziła się kilka lat temu. Zdobywałem
-        doświadczenie
-        zarówno w&nbsppolskich warsztatach stolarskich, jak i&nbspza granicą. W&nbsp2021 roku założyłem własną firmę.
-        Działam głównie w&nbspKrakowie, ale też w&nbspTarnowie i&nbspokolicy.
-    </p>
-    <p>
-        Niech Was jednak nie zmyli zdjęcie - na co dzień nie stoję z&nbspzałożonymi rękami, tylko codziennie zakasam
-        rękawy
-        i&nbsptrudnię się zarówno projektowaniem, doradztwem czy wyceną, jak i&nbspwykonawstwem wraz z&nbspkompleksowym
-        montażem mebli. Przykładam dużą uwagę do detali i&nbspnie toleruję fuszerki. Pracuję na materiałach wysokiej
-        jakości
-        i&nbspdbam o&nbspto, by na koniec pracy nawet najbardziej perfekcyjny klient był usatysfakcjonowany.
-    </p>
-    <p>
-        Jeśli więc potrzebujesz szafek do kuchni, salonu czy łazienki, chciałbyś zabudować nieustawną wnękę czy poddasze
-        lub
-        po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego pomysłu&nbsp-&nbspodezwij
-        się,
-        razem na
-        pewno coś temu zaradzimy!
-    </p>
-</div>
-<div id="ImgBefContContainer">
-    <img src="galleryPhotos/23.jpg">
-    <img src="galleryPhotos/30.jpg">
-    <img src="galleryPhotos/31.jpg">
-</div>
-<div id="contact">
-    <div>
-        <div>
-            <h1 class="headings">KONTAKT</h1>
-            <span><br><br><br>telefon:<br></span>
-            <span>792972255</span><br><br>
-            <span>email:</span><br>
-            <span>meblorzmateusz@gmail.com</span><br><br>
+    <div id="offer">
+        <h1>OFERTA</h1>
+        <div id="offerContent">
+            <span>MEBLE KUCHENNE</span><br>
+            <span>MEBLE ŁAZIENKOWE</span><br>
+            <span>GARDEROBY</span><br>
+            <span>KOMODY</span><br>
+            <span>SZAFY WNĘKOWE</span><br>
+            <span>ŁÓŻKA</span><br>
         </div>
-
     </div>
-    <div id="formContainer">
-        <form target="_blank" action="https://formsubmit.co/dagmarastepak@gmail.com" enctype="multipart/form-data"
-              method="POST" class="form">
-            <input type="text" name="name" class="input, contactForm" placeholder="Imie"><br>
-            <input type="hidden" name="_subject" value="New Email">
-            <input type="email" name="email" class="input, contactForm" placeholder="Email" required><br>
-            <input type="phone" name="phone" class="input, contactForm" placeholder="Numer Telefonu"><br>
-            <textarea class="contactForm" name="msg" id="msg" placeholder="Treść wiadomości"
-                      required></textarea><br>
-            <input type="hidden" name="_next" value="https://dgstach.github.io/MeblarniaWebsite/">
-            <input type="file" name="file" id="file" class="contactForm, choseFileButtonHide"
-                   data-multiple-caption="{count} files selected"
-                   multiple/><br>
-            <br><br><label id="choseFilesBtn" for="file">Wybierz Pliki</label><br><br>
-            <div id="selectedFiles"></div>
-            <br><input type="submit" value="WYŚLIJ" id="send">
-        </form>
-    </div>
-</div>
-<div id="scrollArrowContainer">
-    <br><br><br><img id="aArrowIcon" src="img/scrollToNavbarIcon.svg" alt="scrollIcon">
-</div>
+    <div id="backgroundBeforeAboutMe"></div>
+    <div id="AboutMe">
+        <img src="img/MeblorzPhoto.jpg" alt="MeblorzPhoto">
 
-<div id="socialMediaIcons">
-    <a href="https://www.instagram.com/meblorz_mateusz/">
-        <img src="img/insta.svg" alt="instaIcon">
-    </a>
-    <a href="https://www.facebook.com/meblorzmateusz">
-        <img src="img/fb.svg" alt="fbIcon">
-    </a>
+        <p>
+            Cześć, to ja – Mateusz.
+            Jestem stolarzem i&nbsprobię meble. Moja pasja do tego zawodu narodziła się kilka lat temu. Zdobywałem
+            doświadczenie
+            zarówno w&nbsppolskich warsztatach stolarskich, jak i&nbspza granicą. W&nbsp2021 roku założyłem własną
+            firmę.
+            Działam głównie w&nbspKrakowie, ale też w&nbspTarnowie i&nbspokolicy.
+        </p>
+        <p>
+            Niech Was jednak nie zmyli zdjęcie - na co dzień nie stoję z&nbspzałożonymi rękami, tylko codziennie zakasam
+            rękawy
+            i&nbsptrudnię się zarówno projektowaniem, doradztwem czy wyceną, jak i&nbspwykonawstwem wraz
+            z&nbspkompleksowym
+            montażem mebli. Przykładam dużą uwagę do detali i&nbspnie toleruję fuszerki. Pracuję na materiałach wysokiej
+            jakości
+            i&nbspdbam o&nbspto, by na koniec pracy nawet najbardziej perfekcyjny klient był usatysfakcjonowany.
+        </p>
+        <p>
+            Jeśli więc potrzebujesz szafek do kuchni, salonu czy łazienki, chciałbyś zabudować nieustawną wnękę czy
+            poddasze
+            lub
+            po prostu chciałbyś coś zmienić w&nbspswoim domu, a&nbspnie masz jeszcze konkretnego
+            pomysłu&nbsp-&nbspodezwij
+            się,
+            razem na
+            pewno coś temu zaradzimy!
+        </p>
+    </div>
+    <div id="ImgBefContContainer">
+        <img src="galleryPhotos/23.jpg">
+        <img src="galleryPhotos/30.jpg">
+        <img src="galleryPhotos/31.jpg">
+    </div>
+    <div id="contact">
+        <div>
+            <div>
+                <h1 class="headings">KONTAKT</h1>
+                <span><br><br><br>telefon:<br></span>
+                <span>792972255</span><br><br>
+                <span>email:</span><br>
+                <span>meblorzmateusz@gmail.com</span><br><br>
+            </div>
+
+        </div>
+        <div id="formContainer">
+            <form target="_blank" action="https://formsubmit.co/dagmarastepak@gmail.com" enctype="multipart/form-data"
+                  method="POST" class="form">
+                <input type="text" name="name" class="input, contactForm" placeholder="Imie"><br>
+                <input type="hidden" name="_subject" value="New Email">
+                <input type="email" name="email" class="input, contactForm" placeholder="Email" required><br>
+                <input type="phone" name="phone" class="input, contactForm" placeholder="Numer Telefonu"><br>
+                <textarea class="contactForm" name="msg" id="msg" placeholder="Treść wiadomości"
+                          required></textarea><br>
+                <input type="hidden" name="_next" value="https://dgstach.github.io/MeblarniaWebsite/">
+                <input type="file" name="file" id="file" class="contactForm, choseFileButtonHide"
+                       data-multiple-caption="{count} files selected"
+                       multiple/><br>
+                <br><br><label id="choseFilesBtn" for="file">Wybierz Pliki</label><br><br>
+                <div id="selectedFiles"></div>
+                <br><input type="submit" value="Wyślij" id="send">
+            </form>
+        </div>
+    </div>
+    <div id="scrollArrowContainer">
+        <br><br><br><img id="aArrowIcon" src="img/scrollToNavbarIcon.svg" alt="scrollIcon">
+    </div>
+
+    <div id="socialMediaIcons">
+        <a href="https://www.instagram.com/meblorz_mateusz/">
+            <img src="img/insta.svg" alt="instaIcon">
+        </a>
+        <a href="https://www.facebook.com/meblorzmateusz">
+            <img src="img/fb.svg" alt="fbIcon">
+        </a>
+    </div>
 </div>
 <script>
 

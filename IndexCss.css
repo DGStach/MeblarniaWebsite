@@ -2,6 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: #f6f6f6;
+    width:100vw;
+}
+
+#mainContainer {
+    margin: 0px 100px 30px 100px;
+}
+
 h1 {
     display: grid;
     grid-column: span 2;
@@ -19,7 +28,7 @@ h1 {
 /*-----------TOP NAVBAR --------------- */
 .navBarContainer {
     overflow: hidden;
-   /* padding: 10px 50px;*/
+    /* padding: 10px 50px;*/
     display: flex;
     align-items: center;
     margin: 1% 5% 0% 5%;
@@ -35,12 +44,15 @@ h1 {
     align-items: center;
 }
 
-#navBarContainer img {
-    height: 15vh;
-    width: 15vh;
-    min-height: 80px;
-    min-width: 80px;
-    margin: 2% 0 0 5%;
+.navBarContainerimg {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logoImg{
+    width: 70%;
+    height: auto;
 }
 
 .navBarContainer a {
@@ -50,10 +62,11 @@ h1 {
     padding: 0 1.5vw;
     text-decoration: none;
     font-size: 2vw;
-    font-size: calc(15px + 3*(0.8vw - 4px));
+    font-size: calc(10px + 3 * (0.8vw - 4px));
     font-family: sans-serif;
 
 }
+
 .navBarContainer a:hover {
     color: dimgrey;
     transition: color 0.5s ease 0s;
@@ -63,20 +76,23 @@ h1 {
     color: dimgrey;
 }
 
-@media screen and (max-width: 600px){
-    .navBarContainer a:nth-child(2), a:nth-child(3){
+@media screen and (max-width: 600px) {
+    .navBarContainer a:nth-child(2), a:nth-child(3) {
         display: none;
         color: red;
         z-index: -1;
     }
+
     .navBarContainer {
         margin: 1% 2% 0% 2%;
         padding: 0;
     }
-    .navBarContainer a{
-    font-size: calc(15px + 3 * (1vw - 4px));
+
+    .navBarContainer a {
+        font-size: calc(15px + 3 * (1vw - 4px));
     }
 }
+
 /* ---------------   slideShowContainer------------*/
 #slideShowContainer {
 
@@ -87,12 +103,12 @@ h1 {
 
 #slideShowContainer img {
     display: flex;
-    width: 90vw;
+    width: 70vw;
     height: auto;
 }
 
 #slideShowContainer span {
-    color: antiquewhite;
+    color: #636363;
     cursor: pointer;
     font-size: 10vh;
 }
@@ -100,19 +116,19 @@ h1 {
 #slideShowContainer span:last-child {
     position: absolute;
     z-index: 100;
-    right: 8vw;
-    top: 50vh;
+    right: 10vw;
+    top: 50%;
 }
 
 #slideShowContainer span:first-child {
     position: absolute;
     z-index: 100;
-    left: 8vw;
-    top: 50vh;
+    left: 10vw;
+    top: 50%;
 
 }
 
-@media scren and (max-width:500px){
+@media scren and (max-width: 500px) {
     #slideShowContainer span:last-child {
         top: 50vw;
     }
@@ -129,13 +145,14 @@ h1 {
 }
 
 #offerContent {
-       margin-inline-start: auto;
+    margin-inline-start: auto;
 }
 
 #offer h1 {
     font-family: 'Raleway', sans-serif;
     color: black;
 }
+
 #offer span {
     font-family: 'Open Sans', sans-serif;
     font-size: calc(15px + 3 * (1.4vw - 4px));
@@ -160,8 +177,7 @@ h1 {
 }
 
 #AboutMe img {
-    width: 100%;
-    max-width: calc(300px + 10 * (2vw - 2px));
+    width: 35%;
     height: auto;
     margin-left: 5%;
     float: right;
@@ -259,7 +275,7 @@ formContainer {
 
 .contactForm {
     font-family: 'Open Sans', sans-serif;
-    padding: 10px 0 10px 5px;
+    padding: 10px 0 10px 15px;
     border: calc(2px + 0.16vw) darkgrey solid;
     border-radius: calc(6px + 0.16vw);
     margin: 2px 0;
