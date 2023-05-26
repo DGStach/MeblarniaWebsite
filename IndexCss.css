@@ -17,7 +17,7 @@ body{
     position: fixed;
     display: block;
     width: 100vw;
-    background: red;
+    background: #BABABA;
     top: 0;
     left: 0;
     z-index: 10;
@@ -118,6 +118,52 @@ a{
 }
 
 /*-------HEADER NAVBAR END ---------------*/
+
+/* ----- slideShowContainer START ------------*/
+#slideShowContainer {
+
+    margin: 8% 5% 5% 5%;
+    display: flex;
+    justify-content: center;
+}
+
+#slideShowContainer img {
+    display: flex;
+    width: 70vw;
+    height: auto;
+}
+
+#slideShowContainer span {
+    color: #636363;
+    cursor: pointer;
+    font-size: 10vh;
+}
+
+#slideShowContainer span:last-child {
+    position: absolute;
+    z-index: 100;
+    right: 10vw;
+    top: 50%;
+}
+
+#slideShowContainer span:first-child {
+    position: absolute;
+    z-index: 100;
+    left: 10vw;
+    top: 50%;
+
+}
+
+@media scren and (max-width: 500px) {
+    #slideShowContainer span:last-child {
+        top: 50vw;
+    }
+
+    #slideShowContainer span:first-child {
+        top: 50vw;
+    }
+}
+/* ----- slideShowContainer END ------------*/
 
 /*-----------#OFFER --------------- */
 #offer {

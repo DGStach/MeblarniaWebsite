@@ -10,38 +10,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap"
           rel="stylesheet">
-    <script src = Index.js defer></script>
+    <script src=Index.js defer></script>
 
 <body>
 <div>
-<div id = "header">
-    <header>
+    <div id="header">
         <nav class="navbar">
             <a href="#" class="Logo">
                 <img class="logoNav" src="./assets/navbar/logoNavBar.png">
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Realizacje</a>
+                    <a href="galery.html" class="nav-link">Realizacje</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="offerNavbar">
                     <a href="#" class="nav-link">Oferta</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="aboutMeNavbar">
                     <a href="#" class="nav-link">O&nbspmnie</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="contactNavbar">
                     <a href="#" class="nav-link">Kontakt</a>
                 </li>
             </ul>
-            <div class = "hamburger">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
         </nav>
-    </header>
-</div>
+    </div>
+    <div id="slideShowContainer">
+        <span class="slideShowButton" onclick="scrollPhoto(-1)"><</span>
+        <img id="photoSlideShow" class="slideShowPhoto" src="img/1.webp" alt="img/1.webp">
+        <span class="slideShowButton" onclick="scrollPhoto(1)">></span>
+    </div>
     <div id="offer">
         <h1>OFERTA</h1>
         <div id="offerContent">
