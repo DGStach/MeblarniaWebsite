@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "live": "^0.1.25-beta.0",
+    "server": "^1.0.38"
   }
 }
