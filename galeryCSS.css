@@ -97,9 +97,8 @@ mySlides:hover {
     height: 100%;
 }
 #fullImg {
-    width: 1600px;
-    aspect-ratio: auto 600 / 400;
-    height: 1100px;
+    width: 80vw;
+    height: auto;
     display: block;
     -webkit-user-select: none;
     margin: auto;
@@ -107,9 +106,18 @@ mySlides:hover {
     background-color: hsl(0, 0%, 90%);
     transition: background-color 300ms;
 }
+
+@media (max-width: 768px){
+    #fullImg {
+        width: 95vw;
+    }
+    span{
+        font-size: 1.6rem ;
+    }
+}
 span {
     position: absolute;
-    font-size: 80px;
+    font-size: 4rem;
     color: white;
     font-family: sans-serif;
     top: 5%;
