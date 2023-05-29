@@ -51,6 +51,7 @@ var a = document.getElementById("file");
 Object.values(a.files).forEach((el) => {
     console.log(el.name);
 });
+
 let selFilesContainer = document.getElementById("selectedFiles");
 a.addEventListener('change', (selectedFiles) => {
     selectedFiles = "";
@@ -64,3 +65,17 @@ a.addEventListener('change', (selectedFiles) => {
         selFilesContainer.appendChild(br);
     });
 });
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", ()=>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n=>
+    n.addEventListener("click", ()=>{
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }))

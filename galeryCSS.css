@@ -1,15 +1,73 @@
-* {
-  /*  margin-left: 0;
-    margin-top: 10px;*/
+html {
+    scroll-behavior: smooth;
 }
 
+body{
+    background-color: #f6f6f6;
+    box-sizing: content-box;
+}
+
+/*-------HEADER NAVBAR START ---------------*/
+
+:root {
+    --navBgColor: linear-gradient(45deg, #BABABA, #707070);
+    --navfontCol: #3B3B3B;
+}
+#header{
+    position: fixed;
+    display: block;
+    width: 100vw;
+    background: #BABABA;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.navContainer{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+}
+.navContainer a{
+text-decoration: none;
+    color:var(--navfontCol) ;
+
+}
+
+.logoNav{
+    max-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.icon{
+    display: block;
+   margin: auto 0;
+}
+
+.icon p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.icon img{
+padding: 0;
+}
+
+
+/*-------HEADER NAVBAR END ---------------*/
+
+
+
 .container {
+    padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-img {
+.mySlides {
     width: 400px;
     height: 350px;
     margin: 10px;
@@ -17,7 +75,7 @@ img {
     cursor: pointer;
 }
 
-img:hover {
+mySlides:hover {
     transform: scale(1.1);
 }
 
@@ -69,39 +127,3 @@ span {
     right: 5%;
 grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
 }
-
-
-
-
-
-
-
-
-/*--------------------------------- NAV BAR ------------------------------------- */
-
-#logo{
-    height:15vw;
-    width: auto;
-    min-height: 50px;
-}
-#menuBar{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-#menuBar>a{
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-    margin: 3%;
-    font-size: calc(16px + 5 * (1vw - 4px));
-}
-
-#menuBar a:visited {
-    color: black;
-}
-#stronaGłównaButton:hover{
-    color: dimgrey;
-    margin: 3%;
-}
-

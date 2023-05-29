@@ -101,7 +101,7 @@ a{
     .nav-menu{
         position: fixed;
         left: -130%;
-        top: 70px;
+        top: 90px;
         gap: 0px;
         flex-direction: column-reverse;
         background-color: #f6f6f6;
@@ -126,9 +126,10 @@ a{
 /* ----- slideShowContainer START ------------*/
 #slideShowContainer {
 
-    margin: 8% 5% 5% 5%;
+    margin: 1% 5% 5% 5%;
     display: flex;
     justify-content: center;
+    padding-top: 100px;
 }
 
 #slideShowContainer img {
@@ -213,6 +214,19 @@ a{
     height: auto;
     margin-left: 5%;
     float: right;
+    max-width: 350px;
+    min-width: 180px;
+}
+@media (max-width: 350px){
+    #AboutMe img {
+        margin-left: 0%;
+    }
+    #AboutMe div{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
 }
 
 p {
@@ -246,6 +260,10 @@ p {
 @media screen and (max-width: 320px) {
     #AboutMe img {
         margin-left: 0;
+
+    }
+    #AboutMe div{
+       margin: auto;
     }
 }
 
