@@ -137,26 +137,27 @@ a{
     height: auto;
 }
 
-#slideShowContainer span {
+.slideShowButton {
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    font-size: 4em;
     color: #636363;
     cursor: pointer;
-    font-size: 10vh;
 }
 
-#slideShowContainer span:last-child {
-    position: absolute;
-    z-index: 100;
-    right: 10vw;
-    top: 50%;
+@media (max-width: 768px) {
+    .slideShowButton {
+        font-size: 2em;
+    }
 }
 
-#slideShowContainer span:first-child {
-    position: absolute;
-    z-index: 100;
-    left: 10vw;
-    top: 50%;
-
+@media(max-width: 350px) {
+    .slideShowButton {
+        font-size: 1.4em;
+    }
 }
+
 
 @media scren and (max-width: 500px) {
     #slideShowContainer span:last-child {
