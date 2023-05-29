@@ -97,8 +97,10 @@ mySlides:hover {
     height: 100%;
 }
 #fullImg {
-    width: 80vw;
+
+    max-width: 80vw;
     height: auto;
+    max-height: 90vh;
     display: block;
     -webkit-user-select: none;
     margin: auto;
@@ -118,7 +120,7 @@ mySlides:hover {
 span {
     position: absolute;
     font-size: 4rem;
-    color: white;
+    color: #f6f5f578;
     font-family: sans-serif;
     top: 5%;
     right: 5%;
