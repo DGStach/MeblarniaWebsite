@@ -134,7 +134,7 @@ a{
 
 #slideShowContainer img {
     display: flex;
-    width: 70vw;
+    width: 85vw;
     height: auto;
 }
 
@@ -201,6 +201,13 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     margin: 5%;
+    background-position-x: 50%;
+    background-position-y: 0%;
+}
+@media screen and (max-width: 768px) {
+    #backgroundBeforeAboutMe {
+        background-image: url("galleryPhotos/4.jpg")
+    }
 }
 
 /*-----------#AboutMeContent --------------- */
