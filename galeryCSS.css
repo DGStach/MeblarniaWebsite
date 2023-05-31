@@ -30,10 +30,11 @@ body{
 }
 .navContainer a{
 text-decoration: none;
-    color:var(--navfontCol) ;
-
+    color:var(--navfontCol);
 }
-
+.nav-menu{
+    font-family: CorbelLight;
+}
 .logoNav{
     max-height: 75px;
     display: flex;
@@ -58,8 +59,6 @@ padding: 0;
 
 
 /*-------HEADER NAVBAR END ---------------*/
-
-
 
 .container {
     padding-top: 100px;
