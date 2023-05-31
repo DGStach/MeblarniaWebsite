@@ -82,7 +82,7 @@ a{
 
 .nav-link{
     transition: 0.7s ease;
-    font-family: corbelLight, "Times New Roman";
+    font-family: corbelLight,SEGA, "Times New Roman";
 }
 
 .nav-link:hover{
