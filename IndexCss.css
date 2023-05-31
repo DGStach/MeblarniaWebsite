@@ -260,19 +260,22 @@ p {
     text-indent: 50px;
     text-align: justify;
     letter-spacing: 2px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: CorbelLight,SEGA,'Open Sans', sans-serif;
     font-size: calc(40px + 10 * (0.1vw - 3px));
 }
 
 @media screen and (max-width: 3000px) {
     p {
         font-size: calc(30px + 10 * (0.1vw - 2px));
+        line-height: calc(30px + 10 * (0.1vw - 2px));
+
     }
 }
 
 @media screen and (max-width: 2000px) {
     p {
         font-size: calc(15px + 15 * (100vw - 1000px) / (1000));
+        line-height: calc(15px + 15 * (100vw - 1000px) / (1000));
     }
 }
 
