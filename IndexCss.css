@@ -118,7 +118,7 @@ a{
     .nav-menu{
         position: fixed;
         left: -130%;
-        top: 90px;
+        top: 135px;
         gap: 0px;
         flex-direction: column-reverse;
         background-color: #f6f6f6;
