@@ -9,12 +9,17 @@ body{
 
 /*-------FONTS ---------------*/
 
-@font-face{
-    font-display: swap;
-    font-family: 'SEGA', 'Open Sans', sans-serif;
+@font-face {
+    font-family: 'SEGA';
     font-style: normal;
     font-weight: normal;
-    src: local('SEGA'), url('fonts/SEGA.woff') format('woff') ;
+    src: local('SEGA'), url('/fonts/SEGA.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'corbelLight';
+    font-style: normal;
+    src:local('corbelLight'), url('/fonts/corbelLight.ttf') format('truetype');
 }
 
 /*-------HEADER NAVBAR START ---------------*/
@@ -71,8 +76,7 @@ a{
 
 .nav-link{
     transition: 0.7s ease;
-    font-family:SEGA;
-    color: deeppink;
+    font-family: corbelLight, "Times New Roman";
 }
 
 .nav-link:hover{
