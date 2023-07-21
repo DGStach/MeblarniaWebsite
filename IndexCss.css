@@ -31,14 +31,14 @@ body{
 /*-------HEADER NAVBAR START ---------------*/
 
 :root {
-    --navBgColor: linear-gradient(45deg, #BABABA, #707070);
+    --navBgColor: linear-gradient(45deg, #BABABAd4, #707070);
     --navfontCol: #3B3B3B;
 }
 #header{
     position: fixed;
     display: block;
     width: 100vw;
-    background: #BABABA;
+    background: #BABABAd4;
     top: 0;
     left: 0;
     z-index: 10;
@@ -199,6 +199,7 @@ a{
 #offer {
     display: flex;
     margin: 5%;
+    align-items: center;
 }
 
 #offerContent {
@@ -212,7 +213,13 @@ a{
 
 #offer span {
     font-family: 'Open Sans', sans-serif;
-    font-size: calc(15px + 3 * (1.4vw - 4px));
+    font-size: 1.8em;
+
+}
+@media screen and (max-width: 600px) {
+    #offer span {
+        font-size: 16px;
+    }
 }
 
 /*-----------#background Before About Me --------------- */
@@ -220,7 +227,6 @@ a{
 #backgroundBeforeAboutMe {
     background-image: url("galleryPhotos/32.jpg");
     min-height: 90vh;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -230,7 +236,7 @@ a{
 }
 @media screen and (max-width: 768px) {
     #backgroundBeforeAboutMe {
-        background-image: url("galleryPhotos/4.jpg")
+        background-image: url("img/photo4MainWebsite.jpg")
     }
 }
 

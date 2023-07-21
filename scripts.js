@@ -1,15 +1,15 @@
 /* -----click on offer on the top Navbar -> scroll to offer content on the page ------*/
 document.getElementById('offerNavbar').addEventListener('click', () => {
-    window.scrollTo(0, document.getElementById('offer').offsetTop);
+    window.scrollTo(0, document.getElementById('offer').offsetTop - 180);
 });
 /* -----click on contact on the top Navbar -> scroll to contact content on the page ------*/
 document.getElementById('contactNavbar').addEventListener('click', () => {
-    window.scrollTo(0, document.getElementById('contact').offsetTop);
+    window.scrollTo(0, document.getElementById('contact').offsetTop - 180);
 });
 
 /* -----click on about Me on the top Navbar -> scroll to AboutMe content on the page ------*/
 document.getElementById('aboutMeNavbar').addEventListener('click', () => {
-    window.scrollTo(0, document.getElementById('AboutMe').offsetTop);
+    window.scrollTo(0, document.getElementById('AboutMe').offsetTop - 180);
 });
 
 /* ----Function - scroll page to the top - position (0,0) ---- */
@@ -17,7 +17,6 @@ let aArrowIcon = document.getElementById("aArrowIcon");
 aArrowIcon.onclick = function () {
     scrollTo(0, 0)
 };
-
 
 function myFunction() {
     var x = document.getElementById("navBarContainer");
